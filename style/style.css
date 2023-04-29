@@ -1,7 +1,12 @@
 * {
     font-family: Helvetica, Arial, sans-serif;
   }
-  
+
+.header {
+  background-color: ##f1f1f1;
+  text-align: center;
+  padding: 20px;
+}
   
   h1 {
     color: SeaGreen;
