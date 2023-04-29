@@ -26,3 +26,8 @@
   img{
     border-radius: 50%;
   }
+.footer {
+  background-color: pink;
+  text-align: center;
+  padding: 20px;
+}
