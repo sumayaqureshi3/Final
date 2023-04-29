@@ -8,9 +8,9 @@
   padding: 20px;
 }
   
-  h1 {
-    color: SeaGreen;
-  }
+ h1 {
+   color: SeaGreen;
+ }
   
   
   p, 
@@ -26,6 +26,7 @@
   img{
     border-radius: 50%;
   }
+
 .footer {
   background-color: pink;
   text-align: center;
