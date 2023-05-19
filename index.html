@@ -1,41 +1,105 @@
 <!DOCTYPE html>
 <html>
-<title>Sewimg Images Slideshoww</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <title>Slideshow</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .slideshow-container {
+      width: 60%;
+      margin: auto;
+      position: relative;
+    }
+
+    .mySlides {
+      display: none;
+      width: 100%;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 24px;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      cursor: pointer;
+    }
+
+    .arrow-left {
+      left: 10px;
+    }
+
+    .arrow-right {
+      right: 10px;
+    }
+
+    /* Media Queries */
+
+    /* For screens with a maximum width of 768px */
+    @media (max-width: 768px) {
+      .slideshow-container {
+        width: 80%;
+      }
+
+      .arrow {
+        font-size: 18px;
+      }
+    }
+
+    /* For screens with a maximum width of 480px */
+    @media (max-width: 480px) {
+      .slideshow-container {
+        width: 90%;
+      }
+
+      .arrow {
+        font-size: 16px;
+      }
+    }
+
+    /* For screens with a maximum width of 320px */
+    @media (max-width: 320px) {
+      .slideshow-container {
+        width: 100%;
+      }
+
+      .arrow {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
 <body>
+  <h2 style="text-align: center;">Please click the arrow</h2>
+  <div class="slideshow-container">
+    <img class="mySlides" src="images/slide1.jpeg">
+    <img class="mySlides" src="images/slide2.jpeg">
+    <img class="mySlides" src="images/slide3.jpeg">
+    <img class="mySlides" src="images/slide4.jpeg">
 
-<h2 class="w3-center">Please click arrow</h2>
-<div style ="width:60%">
-<div class="w3-content w3-display-container" style="width:100%">
-  <img class="mySlides" src="images/slide1.jpeg" style="width:90%">
-  <img class="mySlides" src="images/slide2.jpeg" style="width:90%">
-  <img class="mySlides" src="images/slide3.jpeg" style="width:90%">
-  <img class="mySlides" src="images/slide4.jpeg" style="width:90%">
-
-  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
-</div>
+    <button class="arrow arrow-left" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="arrow arrow-right" onclick="plusDivs(1)">&#10095;</button>
   </div>
 
-<script>
-var slideIndex = 1;
-showDivs(slideIndex);
+  <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
 
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "block";  
-}
-</script>
-
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      x[slideIndex-1].style.display = "block";
+    }
+  </script>
 </body>
 </html>
